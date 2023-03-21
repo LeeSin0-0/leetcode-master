@@ -155,6 +155,9 @@ char* replaceSpace(char* s){
 
 Java：
 ```Java
+
+** 就用该法把**
+
 //使用一个新的对象，复制 str，复制的过程对其判断，是空格则替换，否则直接复制，类似于数组复制
 public static String replaceSpace(String s) {
         if (s == null) {
@@ -173,6 +176,7 @@ public static String replaceSpace(String s) {
             }
         }
         return sb.toString();
+        // 还能用return new String(sb);
     }
 
 //方式二：双指针法
