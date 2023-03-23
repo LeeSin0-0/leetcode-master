@@ -163,7 +163,7 @@
 3. [字符串：替换空格](./problems/剑指Offer05.替换空格.md)（用了StringBuilder（因为String是不可变类）StringBuffer 是线程安全的，而StringBuilder 则没有实现线程安全功能，所以性能略高 ）
 4. [字符串：151.翻转字符串里的单词](./problems/0151.翻转字符串里的单词.md)（暴力解法是使用Arraylist,）
 5. [字符串：左旋转字符串](./problems/剑指Offer58-II.左旋转字符串.md)(有StringBuilder的暴力解法，注意StringBuilder.setCharAt(3, 'L')方法，将索引3处设置值为L;)
-6. [帮你把KMP算法学个通透](./problems/0028.实现strStr.md)
+6. [帮你把KMP算法学个通透](./problems/0028.实现strStr.md)（找到字符串匹配的首字母下标，kmp代码先不看了（了解模式串数组过程就好），要会滑动窗口暴力解法）；
 8. [字符串：459.重复的子字符串](./problems/0459.重复的子字符串.md)
 9. [字符串：总结篇！](./problems/字符串总结.md)
 
