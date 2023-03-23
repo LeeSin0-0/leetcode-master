@@ -88,6 +88,22 @@ public:
 一些同学热衷于使用substr，来做这道题。
 其实使用substr 和 反转 时间复杂度是一样的 ，都是O(n)，但是使用substr申请了额外空间，所以空间复杂度是O(n)，而反转方法的空间复杂度是O(1)。
 
+**调用StringBuilder来实现
+
+```java
+class Solution {
+    public String reverseLeftWords(String s, int n) {
+        StringBuilder sb=new StringBuilder();
+        for(int i=n;i<s.length();i++){
+            sb.append(s.charAt(i));
+        }
+        for(int i=0;i<n;i++){
+            sb.append(s.charAt(i));
+        }
+        return sb.toString();
+    }
+}
+```
 **如果想让这套题目有意义，就不要申请额外空间。**
 
 
