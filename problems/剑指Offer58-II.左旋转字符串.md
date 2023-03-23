@@ -26,47 +26,6 @@
 
 # 思路
 
-为了让本题更有意义，提升一下本题难度：**不能申请额外空间，只能在本串上操作**。
-
-不能使用额外空间的话，模拟在本串操作要实现左旋转字符串的功能还是有点困难的。
-
-
-那么我们可以想一下上一题目[字符串：花式反转还不够！](https://programmercarl.com/0151.翻转字符串里的单词.html)中讲过，使用整体反转+局部反转就可以实现反转单词顺序的目的。
-
-这道题目也非常类似，依然可以通过局部反转+整体反转 达到左旋转的目的。
-
-具体步骤为：
-
-**1. 反转区间为前n的子串**
-**2. 反转区间为n到末尾的子串**
-**3. 反转整个字符串**
-
-最后就可以达到左旋n的目的，而不用定义新的字符串，完全在本串上操作。
-
-例如 ：示例1中 输入：字符串abcdefg，n=2
-
-如图：
-
-<img src='https://code-thinking.cdn.bcebos.com/pics/剑指Offer58-II.左旋转字符串.png' width=600> </img></div>
-
-最终得到左旋2个单元的字符串：cdefgab
-
-思路明确之后，那么代码实现就很简单了
-
-C++代码如下：
-
-```CPP
-class Solution {
-public:
-    string reverseLeftWords(string s, int n) {
-        reverse(s.begin(), s.begin() + n);
-        reverse(s.begin() + n, s.end());
-        reverse(s.begin(), s.end());
-        return s;
-    }
-};
-```
-是不是发现这代码也太简单了，哈哈。
 
 # 总结
 
@@ -89,6 +48,8 @@ public:
 其实使用substr 和 反转 时间复杂度是一样的 ，都是O(n)，但是使用substr申请了额外空间，所以空间复杂度是O(n)，而反转方法的空间复杂度是O(1)。
 
 **调用StringBuilder来实现
+
+java
 
 ```java
 class Solution {
