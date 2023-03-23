@@ -47,7 +47,7 @@
 一些同学热衷于使用substr，来做这道题。
 其实使用substr 和 反转 时间复杂度是一样的 ，都是O(n)，但是使用substr申请了额外空间，所以空间复杂度是O(n)，而反转方法的空间复杂度是O(1)。
 
-**调用StringBuilder来实现
+**调用StringBuilder来实现**
 
 java
 
