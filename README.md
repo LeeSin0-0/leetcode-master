@@ -190,7 +190,7 @@
 3. [栈与队列：225.用队列实现栈](./problems/0225.用队列实现栈.md)（Java中，LinkedList实现了Queue接口，boolean add()， poll()获取并移除， peek()获取但不移除）（双向队列(Deque),是Queue的一个子接口，双向队列是指该队列两端的元素既能入队，也能出队。addLast,pollFirst,peekFirst对应了上面queue的操作，还有addFirst，pollLast， peekLast）
 4. [栈与队列：20.有效的括号](./problems/0020.有效的括号.md)（现在java中stack已经快被遗弃了，我们通常把Deque作为Stack使用，注意只调用push()/pop()/peek()方法，不要调用addFirst()/removeFirst()/peekFirst()方法，这样代码更加清晰）
 5. [栈与队列：1047.删除字符串中的所有相邻重复项](./problems/1047.删除字符串中的所有相邻重复项.md)(调用Deque的初始化，Deque<Character> deque = new ArrayDeque<>();Deque具体实现两种类都能选用，ArrayDeque会比LinkedList在除了删除元素这一点外会快一点)
-6. [栈与队列：150.逆波兰表达式求值](./problems/0150.逆波兰表达式求值.md)（经典的后缀表达式，即扫描表达式，遇到数字则入栈，遇到运算符则弹出栈顶两个数字运算后再入栈）
+6. [栈与队列：150.逆波兰表达式求值](./problems/0150.逆波兰表达式求值.md)（经典的后缀表达式，即扫描表达式，遇到数字则入栈，遇到运算符则弹出栈顶两个数字运算后再入栈。Integer.valueOf(s)将字符类型转换成整型）
 7. [栈与队列：239.滑动窗口最大值](./problems/0239.滑动窗口最大值.md)
 8. [栈与队列：347.前K个高频元素](./problems/0347.前K个高频元素.md)
 9. [栈与队列：总结篇！](./problems/栈与队列总结.md)
