@@ -186,7 +186,7 @@
 ## 栈与队列
 
 1. [栈与队列：理论基础](./problems/栈与队列理论基础.md)
-2. [栈与队列：232.用栈实现队列](./problems/0232.用栈实现队列.md)(用了Stack类,用两个栈来实现一个队列，)
+2. [栈与队列：232.用栈实现队列](./problems/0232.用栈实现队列.md)(用了Stack类,posh(),pop(),peek()。用两个栈来实现一个队列，)
 3. [栈与队列：225.用队列实现栈](./problems/0225.用队列实现栈.md)（Java中，LinkedList实现了Queue接口，boolean add()， poll()获取并移除， peek()获取但不移除）（双向队列(Deque),是Queue的一个子接口，双向队列是指该队列两端的元素既能入队，也能出队。addLast,pollFirst,peekFirst对应了上面queue的操作，还有addFirst，pollLast， peekLast）
 4. [栈与队列：20.有效的括号](./problems/0020.有效的括号.md)
 5. [栈与队列：1047.删除字符串中的所有相邻重复项](./problems/1047.删除字符串中的所有相邻重复项.md)
