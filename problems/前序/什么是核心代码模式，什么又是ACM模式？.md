@@ -1,116 +1,82 @@
+import java.util.Scanner;
+//或者直接导入下面两个包
+import java.util.*;
+import java.io.*;
 
-# 什么是核心代码模式，什么又是ACM模式？
+Scanner sc = new Scanner(System.in);
 
-现在很多企业都在牛客上进行面试，**很多录友和我反馈说搞不懂牛客上输入代码的ACM模式**。
+//读一个整数
+int n = sc.nextInt();
+//读一个字符串,遇到分号则输入终止
+String s = sc.next();
+//读一个浮点数
+double t = sc.nextDouble();
+//读一整行,中间可以有多个空格
+String s = sc.nextLine(); 
 
-什么是ACM输入模式呢？ 就是自己构造输入数据格式，把要需要处理的容器填充好，OJ不会给你任何代码，包括include哪些函数都要自己写，最后也要自己控制返回数据的格式。
+System.out.print(n);//不换行输出
+System.out.println(n);
 
-而力扣上是核心代码模式，就是把要处理的数据都已经放入容器里，可以直接写逻辑，例如这样：
+**判断是否还有下一个输入**
+sc.hasNext()
+sc.hasNextInt()
+sc.hasNextDouble()
+sc.hasNextLine() 
 
-```CPP
-class Solution {
-public:
-    int minimumTotal(vector<vector<int>>& triangle) {
+**输出**
+System.out.print(); 
+System.out.println(); 
+System.out.format();
+System.out.printf();
+格式化输出
+double f = 111231.5585;
+ // 保留 2 位小数（有四舍五入）
+System.out.println(String.format("%.2f", f));
 
+
+
+**2. 输入一个矩阵**
+import java.util.Scanner;
+public class Class_2 {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        int m = reader.nextInt();
+        int n = reader.nextInt() ;
+        int [][] array = new int[m][n] ;
+        for (int i=0 ; i<m ; i++)
+            for(int j=0 ;j<n ;j++)
+            {
+                array[i][j]=reader.nextInt();
+            }
+        reader.close() ;
+        // 对矩阵按行打出
+        for (int i=0 ; i<m ; i++)
+        {
+            for(int j=0 ;j<n ;j++)
+            {
+                System.out.print(array[i][j]+" ");
+            }
+            System.out.println( );
+        }            
     }
-};
-```
-
-**如果大家从一开始学习算法就一直在力扣上的话，突然切到牛客网上的ACM模式会很不适应**。
-
-因为我上学的时候就搞ACM，在POJ（北大的在线判题系统）和ZOJ（浙大的在线判题系统）上刷过6、7百道题目了，对这种ACM模式就很熟悉。
-
-接下来我给大家讲一下ACM模式应该如何写。
-
-这里我拿牛客上 腾讯2020校园招聘-后台 的面试题目来举一个例子，本题我不讲解题思路，只是拿本题为例讲解ACM输入输出格式。
-
-题目描述：
-
-由于业绩优秀，公司给小Q放了 n 天的假，身为工作狂的小Q打算在在假期中工作、锻炼或者休息。他有个奇怪的习惯：不会连续两天工作或锻炼。只有当公司营业时，小Q才能去工作，只有当健身房营业时，小Q才能去健身，小Q一天只能干一件事。给出假期中公司，健身房的营业情况，求小Q最少需要休息几天。
-
-输入描述:
-第一行一个整数  表示放假天数
-第二行 n 个数 每个数为0或1,第 i 个数表示公司在第 i 天是否营业
-第三行 n 个数 每个数为0或1,第 i 个数表示健身房在第 i 天是否营业
-（1为营业 0为不营业）
-
-输出描述:
-一个整数，表示小Q休息的最少天数
-
-示例一：
-输入:
-4
-1 1 0 0
-0 1 1 0
-
-输出:
-2
-
-
-这道题如果要是力扣上的核心代码模式，OJ应该直接给出如下代码：
-
-```CPP
-class Solution {
-public:
-    int getDays(vector<int>& work, vector<int>& gym) {
-        // 处理逻辑
-    }
-};
-```
-
-以上代码中我们直接写核心逻辑就行了，work数组，gym数组都是填好的，直接拿来用就行，处理完之后 return 结果就完事了。
-
-那么看看ACM模式我们要怎么写呢。
-
-ACM模式要求写出来的代码是直接可以本地运行的，所以我们需要自己写include哪些库函数，构造输入用例，构造输出用例。
-
-拿本题来说，为了让代码可以运行，需要include这些库函数：
-
-```CPP
-#include<iostream>
-#include<vector>
-using namespace std;
-```
-
-
-然后开始写主函数，来处理输入用例了，示例一 是一个完整的测试用例，一般我们测了一个用例还要测第二个用例，所以用：while(cin>>n) 来输入数据。
-
-这里输入的n就是天数，得到天数之后，就可以来构造work数组和gym数组了。
-
-此时就已经完成了输入用例构建，然后就是处理逻辑了，最后返回结果。
-
-完整代码如下：
-
-```CPP
-#include<iostream>
-#include<vector>
-using namespace std;
-int main() {
-    int n;
-    while (cin >> n) {
-        vector<int> gym(n);
-        vector<int> work(n);
-        for (int i = 0; i < n; i++) cin >> work[i];
-        for (int i = 0; i < n; i++) cin >> gym[i];
-        int result = 0;
-
-        // 处理逻辑
-
-        cout << result << endl;
-    }
-    return 0;
 }
-```
 
-可以看出ACM模式要比核心代码模式多写不少代码，相对来说ACM模式更锻炼代码能力，而核心代码模式是把侧重点完全放在算法逻辑上。
+**3. 输入一个单词字符串**
 
-**国内企业现在很多都用牛客来进行面试，所以这种ACM模式大家还有必要熟悉一下**，以免面试的时候因为输入输出搞不懂而错失offer。
+import java.util.Scanner;
+public class Class_3 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String c = in.next() ;
+        System.out.println(c);
+        in.close();
+    }
+}
 
-如果大家有精力的话，也可以去POJ上去刷刷题，POJ是ACM选手首选OJ，输入模式也是ACM模式。
-
-
-
-
-
------------------------
-<div align="center"><img src=https://code-thinking.cdn.bcebos.com/pics/01二维码.jpg width=450> </img></div>
+**你知道有几行输入**
+Scanner in = new Scanner(System.in);
+int n =in.nextInt();//n表示下面的输入行数
+ArrayList<String> arr = new ArrayList<>();
+While(n-- > 0){
+  arr.add(in.next());
+}
