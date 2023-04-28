@@ -8,16 +8,23 @@ import java.io.*;
 Scanner sc = new Scanner(System.in);
 //读一个整数
 int n = sc.nextInt();
-//读一个字符串,遇到分号则输入终止
+//读一个字符串,
 String s = sc.next();
+//1、一定要读取到有效字符后才可以结束输入。
+//2、对输入有效字符之前遇到的空白，next() 方法会自动将其去掉。
+//3、只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符。
+//4、next() 不能得到带有空格的字符串。
+
 //读一个浮点数
 double t = sc.nextDouble();
 //读一整行,中间可以有多个空格
 String s = sc.nextLine(); 
+//1、以Enter为结束符,也就是说 nextLine()方法返回的是输入回车之前的所有字符。
+//2、可以获得空白
 ```
 ```
 System.out.print(n);//不换行输出
-System.out.println(n);
+System.out.println(n);//换行然后输出
 ```
 **判断是否还有下一个输入**
 ```
