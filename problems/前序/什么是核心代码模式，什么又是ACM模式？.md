@@ -33,6 +33,22 @@ sc.hasNextInt()
 sc.hasNextDouble()
 sc.hasNextLine() 
 ```
+
+**用“#”号当结束条件**
+```
+ public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        int i=1;
+        while(!sc.hasNext("#")){
+        System.out.println("第"+i+"个字符串："+sc.next());
+        i++;
+        }
+        System.out.println("输入完成");
+
+    }
+```
+
 **输出**
 ```
 System.out.print(); 
