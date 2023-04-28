@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.*;
 import java.io.*;
 ```
+```
 Scanner sc = new Scanner(System.in);
 //读一个整数
 int n = sc.nextInt();
@@ -13,17 +14,20 @@ String s = sc.next();
 double t = sc.nextDouble();
 //读一整行,中间可以有多个空格
 String s = sc.nextLine(); 
-
+```
+```
 System.out.print(n);//不换行输出
 System.out.println(n);
-
+```
 **判断是否还有下一个输入**
+```
 sc.hasNext()
 sc.hasNextInt()
 sc.hasNextDouble()
 sc.hasNextLine() 
-
+```
 **输出**
+```
 System.out.print(); 
 System.out.println(); 
 System.out.format();
@@ -32,10 +36,11 @@ System.out.printf();
 double f = 111231.5585;
  // 保留 2 位小数（有四舍五入）
 System.out.println(String.format("%.2f", f));
-
+```
 
 
 **2. 输入一个矩阵**
+```
 import java.util.Scanner;
 public class Class_2 {
     public static void main(String[] args) {
@@ -60,9 +65,9 @@ public class Class_2 {
         }            
     }
 }
-
+```
 **3. 输入一个单词字符串**
-
+```
 import java.util.Scanner;
 public class Class_3 {
     public static void main(String[] args) {
@@ -80,3 +85,4 @@ ArrayList<String> arr = new ArrayList<>();
 While(n-- > 0){
   arr.add(in.next());
 }
+```
