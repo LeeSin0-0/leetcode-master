@@ -1,10 +1,10 @@
+```
 import java.util.Scanner;
 //或者直接导入下面两个包
 import java.util.*;
 import java.io.*;
-
+```
 Scanner sc = new Scanner(System.in);
-
 //读一个整数
 int n = sc.nextInt();
 //读一个字符串,遇到分号则输入终止
