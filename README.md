@@ -150,7 +150,7 @@
 5. [哈希表：202.快乐数](./problems/0202.快乐数.md)（创建Hashest以避免进入无限循环，设计整数的每位数）
 6. [哈希表：1.两数之和](./problems/0001.两数之和.md)（用了Map,containsKey（））
 7. [哈希表：454.四数相加II](./problems/0454.四数相加II.md)（四个数组四数相加为0，用了Map，比较简单）
-8. [哈希表：383.赎金信](./problems/0383.赎金信.md)
+8. [哈希表：383.赎金信](./problems/0383.赎金信.md)（magazine.toCharArray() 将String字符串转换成字符数组）
 9. [哈希表：15.三数之和](./problems/0015.三数之和.md)（难，用了List.sort（），还用了Arrays.sort（），Arrays.asList（））
 10. [双指针法：18.四数之和](./problems/0018.四数之和.md)（只是在三数之和上加一层循环）
 11. [哈希表：总结篇！](./problems/哈希表总结.md)
